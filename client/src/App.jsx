@@ -6,6 +6,7 @@ import Navbar from './components/student/Navbar';
 import AddCourse from './pages/educator/AddCourse';
 import Educator from './pages/educator/Educator';
 import Dashboard from './pages/educator/Dashboard';
+import CourseList from './pages/student/CourseList';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
     {!isEducator && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/educator' element={<Educator />}>
+        <Route path="/courseList" element={<CourseList />} />
+         <Route path='/educator' element={<Educator />}>
           <Route path='educator' element={<Dashboard />} />
           <Route path='add-course' element={<AddCourse />} />
         </Route>
