@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
 const Hero = () => {
   return (
@@ -19,6 +20,7 @@ const Hero = () => {
       <p className="md:hidden text-gray-500 max-w-sm mx-auto">
         Learn, grow, and excel with expert-led courses—anytime, anywhere!
       </p>
+      <SearchBar />
     </div>
   );
 };
