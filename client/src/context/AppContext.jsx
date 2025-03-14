@@ -1,10 +1,12 @@
 import {createContext, useEffect, useState} from 'react';
 import { dummyCourses } from '../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 export const AppContext = createContext();
 
 export const AppContextProvider =(props)=>{
 
+    const navigate = useNavigate();
     
     const [allCourses , setAllCourses] = useState([])
 
@@ -18,7 +20,7 @@ export const AppContextProvider =(props)=>{
     } , [])
 
     const value = {
-        allCourses ,
+        allCourses , navigate
     }
     
     return (
