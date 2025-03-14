@@ -11,7 +11,7 @@ const Navbar = () => {
     const {openSignIn} =useClerk();
     const {user} = useUser();
 
-    const {navigate} = useContext(AppContext);
+    const {navigate, isEducator} = useContext(AppContext);
 
 
 
@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='flex items-center gap-5 '>
                 
                 {user && <>
-                    <button> Become Educator</button>  |  
+                    <button onClick={()=>{navigate('/educator')}} className='cursor-pointer'>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>  |  
                 <Link to='/my-enrollments'> My Enrollements</Link>
                 </>}
 
@@ -34,7 +34,7 @@ const Navbar = () => {
 
         <div className='md:hidden flex item-center gap-2 sm:gap-5 text-gray-500'>
             <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
-            {user && <><button> Become Educator</button>  |  
+            {user && <><button onClick={()=>{navigate('/educator')}}className='cursor-pointer'>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>  |  
             <Link to='/my-enrollments'> My Enrollements</Link> </>}
             {user ? <UserButton/> : <button onClick={()=>{openSignIn()}}><img src={assets.user_icon} alt="Default_user" /></button>}
             </div>
