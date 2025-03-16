@@ -18,7 +18,7 @@ function App() {
     {!isEducator && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courseList" element={<CourseList />} />
+        <Route path="/courseList/:input?" element={<CourseList />} />
          <Route path='/educator' element={<Educator />}>
           <Route path='educator' element={<Dashboard />} />
           <Route path='add-course' element={<AddCourse />} />
