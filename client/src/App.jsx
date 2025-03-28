@@ -7,6 +7,7 @@ import AddCourse from './pages/educator/AddCourse';
 import Educator from './pages/educator/Educator';
 import Dashboard from './pages/educator/Dashboard';
 import CourseList from './pages/student/CourseList';
+import CourseDetail from './pages/student/CourseDetail';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courseList/:input?" element={<CourseList />} />
+        <Route path="/course/:id" element={<CourseDetail /> } />
          <Route path='/educator' element={<Educator />}>
           <Route path='educator' element={<Dashboard />} />
           <Route path='add-course' element={<AddCourse />} />
