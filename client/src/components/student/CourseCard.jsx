@@ -13,7 +13,7 @@ const CourseCard = ({props}) => {
         <img src={props.courseThumbnail}  alt="" className='w-full' />
         <div className='p-3 text-left'>
             <h3 className='text-base font-semibold'>{props.courseTitle}</h3>
-            <p className='text-gray-500'>{props.educator.name}</p>
+            <p className='text-gray-500'>Soumya hedaoo</p>
             <div className='flex items-center space-x-2'>
                 <p>{calculateRating(props)}</p>
                 <div className='flex'>
