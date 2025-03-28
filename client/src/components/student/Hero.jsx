@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full pt-20 md:pt-36 px-7 md:px-0 space-y-7 text-center bg-gradient-to-b from-cyan-100/70">
+    <div className="flex flex-col items-center justify-center w-full pt-20 md:pt-36 px-7 md:px-0 space-y-7 text-center lex flex-col items-center justify-center w-full pt-20 md:pt-36 px-7 md:px-0 space-y-7 text-center bg-gradient-to-b from-cyan-100/70">
       {/* Heading with Tailwind classes (no custom config) */}
       <h1 className="text-[28px] md:text-[48px] leading-[34px] md:leading-[56px] font-bold text-gray-800 max-w-3xl mx-auto">
         <span className="text-blue-600">Unlock Knowledge, Elevate Your Skills! 🚀</span>
