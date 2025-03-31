@@ -8,6 +8,8 @@ import Educator from './pages/educator/Educator';
 import Dashboard from './pages/educator/Dashboard';
 import CourseList from './pages/student/CourseList';
 import CourseDetail from './pages/student/CourseDetail';
+import MyEnrollement from './pages/student/MyEnrollement';
+import Player from './pages/student/Player';
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courseList/:input?" element={<CourseList />} />
         <Route path="/course/:id" element={<CourseDetail /> } />
+        <Route path="/my-enrollments" element={<MyEnrollement />} />
+        <Route path="/player/:id" element={<Player/> } />
          <Route path='/educator' element={<Educator />}>
           <Route path='educator' element={<Dashboard />} />
           <Route path='add-course' element={<AddCourse />} />
