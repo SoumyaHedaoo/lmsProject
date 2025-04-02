@@ -126,7 +126,11 @@ const CourseDetail = () => {
         <div className="max-w-[424px] z-10 shadow-[0px_4px_15px_2px_rgba(0,0,0,0.1)] rounded-t p-3 md:rounded-none overflow-hidden bg-white min-w-[300px] sm:min-w-[420px]">
 
           {
-                playerData ? <YouTube videoId ={playerData.videoId} opts={{playerVars: {autoplay:1}}}  iframeClassname='w-full aspect-video '/> : <img src={courseData.courseThumbnail} alt="" />
+                playerData ? <YouTube videoId ={playerData.videoId}  opts={{
+                  width: '100%',
+                  height: '100%',
+                  playerVars: { autoplay: 1 },
+                }}  iframeClassname='absolute top-0 left-0 w-full h-full'/> : <img src={courseData.courseThumbnail} alt="" />
 
           }
           
